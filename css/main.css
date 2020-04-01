@@ -29,6 +29,11 @@ body {
     list-style-type: none;
 }
 
+.buttonNone {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
 /* 링크 스타일 */
 a {
     text-decoration: none;
@@ -45,7 +50,7 @@ a {
     clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-/*  모바일 & 데스크탑 공통 */
+/*  모바일 & 데스크탑 공통 디바이스*/
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -68,10 +73,15 @@ a {
 .appFooter {
     background-color: green;
 }
-.appHeader {
+
+
+/* .appHeader {
     display: flex;
     flex-flow: row wrap;
-}
+} */
+/* 공통 브랜드 */
+
+/* 공통 멤버링크 */
 .memberOnly{
     text-align: right;
 }
@@ -81,6 +91,21 @@ a {
 }
 .memberOnly span {
     margin: 0 1rem;
+}
+/* 공통 검색 폼 */
+[type="search"] {
+    border: 1px solid #aaa;
+    height: 35px;
+    font-size: 1.4rem;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+.buttonSearch, [type="search"]{
+    vertical-align: middle;
+}
+.buttonSearch{
+    color: #fff;    
 }
 
 /* 모바일 */
@@ -96,6 +121,10 @@ a {
     }
 
     /* 모바일 헤더 */
+    .appHeader {
+        display: flex;
+        flex-flow: row wrap;
+    }
     .appHeader {
         /* position: relative; */
         /* padding: 40px 20px 20px; */
@@ -115,15 +144,6 @@ a {
     .memberOnly {
         order: -1;
         background-color: #988574;
-    }
-
-
-
-    .memberOnly span {
-        color: #fff;
-    }
-
-    .memberOnly li a {
         color: #fff;
     }
 
@@ -147,24 +167,11 @@ a {
         margin: 0 1rem;
     } */
     /* 모바일 검색 폼 */
-    .searchForm input {
+    
+    [type="search"] {
         width: calc(100% - 50px);
-        border: 1px solid #aaa;
-        height: 35px;
-        font-size: 1.4rem;
-        margin-right: 5px;
-        border-radius: 5px;
-        padding: 2px 10px;
     }
-
-    .buttonNone {
-        padding: 0;
-        border: 0;
-        background-color: transparent;
-    }
-    .buttonSearch, [type="search"]{
-        vertical-align: middle;
-    }
+    
     .buttonSearch {
         height: 35px;
         width: 35px;
@@ -229,8 +236,36 @@ a {
         width: 1000px;
         padding: 0 calc((100% - 1000px) / 2);
     }
-
+    /* 데스크탑 헤더 */
     .appHeader {
+        position: relative;
+        padding-bottom: 20px;
+    }
+    /* 데스크탑 브랜드 */
+    .brand{
+        position: absolute;
+        top: calc( 50% - 30px );
+        left: 0;
+    }
+    /* 데스크탑 검색 폼 */
+    .searchForm{
+        text-align: right;
+    }
+    [type="search"] {
+        width:40%;
+    }
+    .buttonSearch{
+        border: 1px solid #aaa;
+        border-radius: 3px;
+        background: #988574;
+        padding: 0 1rem;
+        height: 30px;
+    }
+    /* 데스크탑 멤버 링크 */
+    .memberOnly {
+        padding: 10px 0;
+    }
+    /* .appHeader {
         position: relative;
         padding: 10px 0;
     }
@@ -264,7 +299,7 @@ a {
         background-color: #988574;
         border: 1px solid #38302E;
         border-radius: 5px;
-    }
+    } */
     .appNavigation {
         height: 20vh;
     }
