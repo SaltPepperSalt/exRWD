@@ -1,14 +1,16 @@
+@import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 /* 기본 스타일 */
 html {
     font-size: 10px;
 }
 
 body {
-    margin: 0;
     background-color: skyblue;
     font-size: 1.6rem;
+    font-family: 'spoqa-han-sans', sans-serif;
 }
-
+/* 스타일 초기화 */
 .resetMargin{
     margin: 0;
 }
@@ -21,6 +23,20 @@ body {
     margin: 0;
     padding-left: 0;
     list-style-type: none;
+}
+/* 링크 스타일 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 유틸 */
+.a11yHidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0 0, 0 0, 0 0);
+    display: block;
 }
 
 /*  모바일 & 데스크탑 공통 */
@@ -61,15 +77,84 @@ body {
     .appFooter {
         width: 100%;
     }
+    /* 모바일 헤더 */
+    .appHeader {
+        display: flex;
+        flex-flow: row wrap;
+        /* position: relative; */
+        /* padding: 40px 20px 20px; */
+        
+        background-color: #38302E;
+    }
+    .brand,.memberOnly,.searchForm{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0 20px;
+    }
+    /* 모바일 브랜드 */
+    /* 모바일 멤버링크 */
+    .memberOnly{
+        order: -1;
+        text-align: right;
+        background-color: #988574;
+    }
+    .memberOnly li{
+        display: inline-block;
+        line-height: 30px;
+    }
+    .memberOnly li * {
+        color: #fff;
+    }
+    .memberOnly li a {
+        margin: 0 1rem;
+        font-size: 1.4rem;
+    }
+    /* .memberOnly{
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: right;
+        width: 100%;
+        background-color: #988574;
+    }
+    .memberOnly li{
+        display: inline-block;
+        line-height: 30px;
+    }
+    .memberOnly li * {
+        color: white;
+        font-size: 1.4rem;
+    }
+    .memberOnly li a {
+        margin: 0 1rem;
+    } */
+    /* 모바일 검색 폼 */
+    .searchForm input{
+        width: 85vw;
+        height: 35px;
+        font-size: 1.4rem;
+        margin-right: 10px;
+        border-radius: 5px;
+
+    }
+    .buttonSearch{
+        height: 35px;
+        width: 35px;
+        border: none;
+        background-image: url(./images/btn_search.png) ;
+        background-color:  #38302E;
+        background-size: 35px;
+        text-indent: 35px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 
     .appNavigation {
         position: absolute;
         left: -100%;
     }
 
-    .appHeader {
-        /* height: 15vh; */
-    }
+    
 
     .appMain {
         height: 70vh;
