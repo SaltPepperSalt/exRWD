@@ -1,5 +1,6 @@
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
 /* 기본 스타일 */
 html {
     font-size: 10px;
@@ -10,33 +11,38 @@ body {
     font-size: 1.6rem;
     font-family: 'spoqa-han-sans', sans-serif;
 }
+
 /* 스타일 초기화 */
-.resetMargin{
+.resetMargin {
     margin: 0;
 }
+
 .resetBox {
     margin: 0;
     padding: 0;
     border: none;
 }
-.resetList{
+
+.resetList {
     margin: 0;
     padding-left: 0;
     list-style-type: none;
 }
+
 /* 링크 스타일 */
 a {
     text-decoration: none;
     color: inherit;
 }
+
 /* 유틸 */
-.a11yHidden{
+.a11yHidden {
+    position: absolute;
     width: 1px;
     height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
     clip-path: polygon(0 0, 0 0, 0 0);
-    display: block;
 }
 
 /*  모바일 & 데스크탑 공통 */
@@ -77,38 +83,48 @@ a {
     .appFooter {
         width: 100%;
     }
+
     /* 모바일 헤더 */
     .appHeader {
         display: flex;
         flex-flow: row wrap;
         /* position: relative; */
         /* padding: 40px 20px 20px; */
-        
+
         background-color: #38302E;
     }
-    .brand,.memberOnly,.searchForm{
+
+    .brand,
+    .memberOnly,
+    .searchForm {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         padding: 0 20px;
     }
+
     /* 모바일 브랜드 */
     /* 모바일 멤버링크 */
-    .memberOnly{
+    .memberOnly {
         order: -1;
         text-align: right;
         background-color: #988574;
     }
-    .memberOnly li{
+
+    .memberOnly li {
         display: inline-block;
         line-height: 30px;
     }
-    .memberOnly li * {
+
+    .memberOnly span {
+        margin: 0 1rem;
         color: #fff;
     }
+
     .memberOnly li a {
-        margin: 0 1rem;
         font-size: 1.4rem;
+        color: #fff;
     }
+
     /* .memberOnly{
         position: absolute;
         left: 0;
@@ -129,24 +145,44 @@ a {
         margin: 0 1rem;
     } */
     /* 모바일 검색 폼 */
-    .searchForm input{
-        width: 85vw;
+    .searchForm input {
+        width: calc(100% - 50px);
+        border: 1px solid #aaa;
         height: 35px;
         font-size: 1.4rem;
-        margin-right: 10px;
+        margin-right: 5px;
         border-radius: 5px;
-
+        padding: 2px 10px;
     }
-    .buttonSearch{
+
+    .buttonNone {
+        padding: 0;
+        border: 0;
+        background-color: transparent;
+    }
+    .buttonSearch, [type="search"]{
+        vertical-align: middle;
+    }
+    .buttonSearch {
         height: 35px;
         width: 35px;
+        color: white;
         border: none;
-        background-image: url(./images/btn_search.png) ;
-        background-color:  #38302E;
-        background-size: 35px;
-        text-indent: 35px;
-        white-space: nowrap;
-        overflow: hidden;
+        position: relative;
+        font-size: 1.2rem;
+        /* top: -7px; */
+        cursor: pointer;
+    }
+
+    .buttonSearch::after {
+        content: "";
+        background-image: url(./images/btn_search.png);
+        background-size: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
     }
 
     .appNavigation {
@@ -154,7 +190,7 @@ a {
         left: -100%;
     }
 
-    
+
 
     .appMain {
         height: 70vh;
