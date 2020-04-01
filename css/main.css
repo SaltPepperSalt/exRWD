@@ -56,9 +56,6 @@ a {
     flex-flow: row wrap;
 }
 
-.appHeader {
-    background-color: red;
-}
 
 .appNavigation {
     background-color: blue;
@@ -70,6 +67,20 @@ a {
 
 .appFooter {
     background-color: green;
+}
+.appHeader {
+    display: flex;
+    flex-flow: row wrap;
+}
+.memberOnly{
+    text-align: right;
+}
+.memberOnly li {
+    display: inline-block;
+    line-height: 30px;
+}
+.memberOnly span {
+    margin: 0 1rem;
 }
 
 /* 모바일 */
@@ -86,11 +97,8 @@ a {
 
     /* 모바일 헤더 */
     .appHeader {
-        display: flex;
-        flex-flow: row wrap;
         /* position: relative; */
         /* padding: 40px 20px 20px; */
-
         background-color: #38302E;
     }
 
@@ -106,22 +114,16 @@ a {
     /* 모바일 멤버링크 */
     .memberOnly {
         order: -1;
-        text-align: right;
         background-color: #988574;
     }
 
-    .memberOnly li {
-        display: inline-block;
-        line-height: 30px;
-    }
+
 
     .memberOnly span {
-        margin: 0 1rem;
         color: #fff;
     }
 
     .memberOnly li a {
-        font-size: 1.4rem;
         color: #fff;
     }
 
@@ -210,10 +212,10 @@ a {
     }
 }
 
-/* 데스크탑 */
+/* 데스크탑 디바이스*/
 @media screen and (min-width:1000px) {
     .container {
-        background-color: pink;
+        background-color: #FFF;
         justify-content: center;
     }
 
@@ -229,9 +231,40 @@ a {
     }
 
     .appHeader {
-        /* height: 10vh; */
+        position: relative;
+        padding: 10px 0;
     }
-
+    .memberOnly{
+        width: calc(100% - 204px);
+    }
+    .memberOnly li {
+        line-height: 1.15;
+    }
+    .memberOnly li a {
+        vertical-align: top;
+    }
+    .searchForm{
+        position: absolute;
+        top: 35px;
+        right: 0;
+    }
+    [type="search"]{
+        width: 400px;
+        height: 35px;
+        border: 1px solid #988574;
+        border-radius: 5px;
+        padding: 2px 10px;
+        font-size: 1.4rem;
+    }
+    .buttonSearch{
+        color: #FFF;
+        font-size: 1.4rem;
+        width: 55px;
+        height: 35px;
+        background-color: #988574;
+        border: 1px solid #38302E;
+        border-radius: 5px;
+    }
     .appNavigation {
         height: 20vh;
     }
