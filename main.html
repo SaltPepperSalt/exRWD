@@ -31,37 +31,43 @@
                 </fieldset>
             </form>
         </header>
-        <nav class="appNavigation">
-            <ul class="appNavigation__menu">
-                <li>HTML에 대해
+        <nav class="appNavigation menu" aria-labelledby="menuTitle">
+            <h2 class="a11yHidden" id="menuTitle">메인 메뉴</h2>
+            <button class="buttonNone burgerButton" type="button" aria-label="메뉴 열기" title="메뉴 열기">
+                <span class="burgerBar round positionTop"></span>
+                <span class="burgerBar round positionMiddle"></span>
+                <span class="burgerBar round positionBottom"></span>
+            </button>
+            <ul class="appNavigation__menu resetList">
+                <li class="menuAct"><span>HTML에 대해</span>
                     <ul class="appNavigation__submenu">
                         <li><a href="#">HTML5 소개</a></li>
                         <li><a href="#">레퍼런스 소개</a></li>
                         <li><a href="#">활용 예제</a></li>
                     </ul>
                 </li>
-                <li>CSS에 대해
+                <li><span>CSS에 대해</span>
                     <ul class="appNavigation__submenu">
                         <li><a href="#">CSS 소개</a></li>
                         <li><a href="#">CSS2 VS CSS3</a></li>
                         <li><a href="#">CSS 애니메이션</a></li>
                     </ul>
                 </li>
-                <li>웹표준/웹접근성
+                <li><span>웹표준/웹접근성</span>
                     <ul class="appNavigation__submenu">
                         <li><a href="#">웹표준 이란?</a></li>
                         <li><a href="#">웹접근성의 개요</a></li>
                         <li><a href="#">HTML5의 현재와 미래</a></li>
                     </ul>
                 </li>
-                <li>묻고 답하기
+                <li><span>묻고 답하기</span>
                     <ul class="appNavigation__submenu">
                         <li><a href="#">묻고 답하기</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">1대1 질문</a></li>
                     </ul>
                 </li>
-                <li>자료실
+                <li><span>자료실</span>
                     <ul class="appNavigation__submenu">
                         <li><a href="#">공개 자료실</a></li>
                         <li><a href="#">이미지 자료실</a></li>
