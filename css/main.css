@@ -280,47 +280,46 @@ a {
 
     /* 모바일 메인메뉴 */
 
-    /* .appNavigation {
-        position: relative;
-        
-    }
-    .actNav {
+    .appNavigation {}
+
+    .menu__list {
+        transform: translateX(-105%);
+        position: fixed;
+        top: 0;
         left: 0;
-    }
-    .appNavigation__menu{
-        position: absolute;
-        left: -100%;
-        background-color: rgba(38, 30, 25, 0.7);
         width: 60%;
         height: 100vh;
         color: white;
-        padding:2rem;
+        padding: 2rem;
+        background-color: rgba(38, 30, 25, 0.7);
+        backdrop-filter: blur(10px);
     }
-    .appNavigation__menu span {
+
+    .isAct .menu__list {
+        transform: none;
+    }
+
+    .menu__link {
         font-size: 1.6rem;
         font-weight: 700;
     }
-    .appNavigation__menu span::before{
-        content: "+";
-        font-size: 25px;
-        font-weight: 900;
-        margin-right: 1rem;
-    }
-    .appNavigation__menu li {
+
+    .menu__list li {
         margin: 30px 0;
     }
-    .appNavigation__submenu li a{
+
+    .menu__subMenu li a {
         font-size: 14px;
     }
-    .appNavigation__submenu{
+
+    .menu__subMenu {
         display: none;
     }
-    .menuAct .appNavigation__submenu{
+
+    .menuAct .menu__subMenu {
         display: block;
     }
-    .menuAct span::before {
-        content: "-";
-    } */
+
     .burgerButton {
         width: 30px;
         height: 30px;
@@ -330,9 +329,6 @@ a {
         overflow: hidden;
     }
 
-    .appMain {
-        height: 70vh;
-    }
 
     .burgerBar {
         position: absolute;
@@ -376,6 +372,10 @@ a {
     .isAct .positionBottom {
         top: 50%;
         transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .appMain {
+        height: 70vh;
     }
 
     .book,
@@ -496,16 +496,19 @@ a {
     .burgerButton {
         display: none;
     }
-    .appNavigation{
+
+    .appNavigation {
         background-color: #988574;
     }
+
     .menu__list {
         width: 1000px;
         margin: 1em auto 0.5em;
         display: table;
         color: #fff;
     }
-    .menu__link{
+
+    .menu__link {
         text-shadow: 1px 0 #000, 0 1px #000000, -1px 0 #000, 0 -1px #000000;
         font-weight: 700;
         padding: 0.5em 1em;
@@ -513,15 +516,18 @@ a {
         display: inline-block;
         letter-spacing: 1px;
     }
+
     .menu__item {
         display: table-cell;
         table-layout: 100%;
     }
-    .menu__subMenu li a{
+
+    .menu__subMenu li a {
         padding: 0.5em;
         margin: 0.25em;
         display: block;
     }
+
     .appMain {
         height: 60vh;
         justify-content: space-between;
