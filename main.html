@@ -78,27 +78,108 @@
         </nav>
         <main class="appMain">
             <section class="book">
-                <h2 class="book__title sprite spritebook">추천서적<span class="book__enTitle themeGreen">Recommend
+                <h2 class="sprite spritebook book__title">추천서적<span class="themeGreen book__enTitle">Recommend
                         Book</span></h2>
                 <figure class="book__cover">
-                    <img src="./images/book_rwd.jpg" alt="" class="resposive" aria-labelledby="book__coverCaption">
+                    <img src="./images/book_rwd.jpg" alt="" class="responsive" aria-labelledby="book__coverCaption">
                     <figcaption id="book__coverCaption">반응형 웹 핵심 가이드 북</figcaption>
                 </figure>
                 <dl class="book__info">
                     <dt>저자</dt>
                     <dd>김데레사</dd>
                     <dt class="a11yHidden">평점</dt>
-                    <dd class="themeGreen"><span aria-hidden="true" aria-label="5점 만점에 4점">★★★★☆</span></dd>
+                    <dd class="themeGreen" aria-hidden="true" aria-label="5점 만점에 4점"><span>★★★★☆</span></dd>
                 </dl>
                 <p class="book__summary">
                     반응형웹 디자인을 위한 핵심 내용을 다루고 있으며 미디어쿼리, 유연한 레이아웃, 반응형 이미지 기법을 학습할 수 있다. 모바일 및 다양한 해상도에 대응이 가능한
                     웹디자인을 이 책으로 시작해 보자!
                 </p>
             </section>
-            <section class="news">새소식</section>
-            <section class="board">게시판</section>
-            <article class="twitter">트위터</article>
-            <section class="favorite">인기사이트</section>
+            <section class="news">
+                <h2 class="sprite spritenews news__title">새소식<span class="themeYellow news__enTitle">WebCafe News</span>
+                </h2>
+                <figure class="news__cover">
+                    <!-- <video class="news__video responsive" controls poster="./media/poster.jpg">
+                        <source src="./media/stories.mp4" type="video/mp4">
+                        <track src="./media/stories-en.vtt" kind="captions" srclang="en" label="English Caption" />
+                    </video> -->
+
+                    <div class="iframe__wrapper iframe16To9">
+                        <iframe class="iframe" src="https://www.youtube.com/embed/6fVE8kSM43I" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <figcaption class="a11yHidden">구글 개발자 이야기</figcaption>
+                    
+                </figure>
+                <p class="news__summary">
+                    구글플레이는 다양한 분야에서 활약하고 있는 국내 개발사들을 모시고 직접 이야기를 나눠보는 ‘구글플레이 개발자와의 대화’ 행사를 정기적으로 개최할 예정입니다. 오늘 3월 29일(수)
+                    구글 캠퍼스 서울에서 열린 첫 번째 ‘구글플레이 개발자와의 대화’는 ‘해외에서 빵터진 한국 앱'을 주제로 진행됐는데요, 국내 앱 시장은 물론 글로벌 시장에서도 주목 받으며 글로벌
+                    진출의 본보기가 되고 있는 개발사 세 곳과 함께 했습니다.
+                </p>
+                <time class="news__date icon-calendar" datetime="2020-04-02">2020-04-02</time>
+            </section>
+            <section class="board">
+                <h2 class="sprite spriteboard board__title">게시판<span class="themeBrown board__enTitle">WebCafe
+                        Board</span>
+                </h2>
+                <ul class="board__list resetList">
+                    <li>
+                        <a href="#" class="icon-star">HTML의 모든 것을 알려주마 샘플 활용법
+                        </a>
+                        <time class="news__time" datetime="2020-04-03">2020.04.03</time>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-star">W3C 사이트 리뉴얼 및 공지사항
+                        </a>
+                        <time class="news__time" datetime="2020-04-03">2020.04.03</time>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-star">KWCAG 2.1 소식
+                        </a>
+                        <time class="news__time" datetime="2020-04-03">2020.04.03</time>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-star">서버 점검으로 인한 사이트 이용안내 입니다.
+                        </a>
+                        <time class="news__time" datetime="2020-04-03">2020.04.03<time>
+                    </li>
+                    <li>
+                        <a href="#" class="icon-star">여러분들이 생각하는 웹 접근성에 대해 이야기를 나누어 봅시다.
+                        </a>
+                        <time class="news__time" datetime="2020-04-03">2020.04.03</time>
+                    </li>
+                </ul>
+                <div class="more icon-plus">더보기</div>
+            </section>
+            <article class="twitter">
+                <h2 class="sprite spritetwitter twitter__title">트위터<span class="themeSkyblue twitter__enTitle">WebCafe
+                        Twitter</span>
+                </h2>
+                <dl class="twitter__info">
+                    <dt>
+                        김데레사
+                    </dt>
+                    <dd>
+                        <a href="#" class="themeSkyblue">@seulbinim</a>
+                    </dd>
+                </dl>
+                <img src="./images/seulbinim.jpg" alt="" class="twitter__img">
+                <p class="twitter__summary">웹표준 핵심 가이드북 개정판 출시 기념으로 세미나를 준비했습니다. 참석을 원하시는 분들은 트위터로 문의하시기 바랍니다.</p>
+                <time class="twitter__date" datetime="2020-04-03"><span class="icon-calendar themeSkyblue"
+                        aria-hidden="true"></span>2020-04-03</time>
+            </article>
+            <section class="favorite">
+                <h2 class="sprite spritefavorite favorite__title">인기사이트<span
+                        class="themeOrange favorite__enTitle">Favorite
+                        Site</span>
+                </h2>
+                <ol class="favorite__list resetList">
+                    <li><a href="#">Learn CSS Layout</a><span class="favorite__modal">새창으로 열립니다.</span></li>
+                    <li><a href="#">Flexbox Froggy</a><span class="favorite__modal">새창으로 열립니다.</span></li>
+                    <li><a href="#">CSS Grid Garden</a><span class="favorite__modal">새창으로 열립니다.</span></li>
+                    <li><a href="#">MDN Web Docs</a><span class="favorite__modal">새창으로 열립니다.</span></li>
+                </ol>
+            </section>
         </main>
         <footer class="appFooter">푸터</footer>
     </div>
